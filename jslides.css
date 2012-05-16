@@ -1,0 +1,45 @@
+ul.jslides {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	position: relative;
+}
+
+ul.jslides li {
+	position: absolute;
+}
+
+ul.jslides li img {
+	background-color: black;
+}
+
+ul.jslides li .title, ul.jslides li .caption {
+	position: absolute;
+}
+
+ul.jslides li .title {
+	top: 5px;
+	left: 5px;
+	color: white;
+	text-shadow: 1px 1px 3px black;
+	font-weight: bold;
+}
+
+ul.jslides li .caption {
+	bottom: 0px;
+	left: 0px;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	width: 100%;
+	padding: 10px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul.jslides li.active {
+	z-index: 99;
+}
+
+ul.jslides li.next {
+	z-index: 98;
+}

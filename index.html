@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jSlides</title>
+	<meta charset="utf-8" />
+	<style> body { font-family: arial;  } </style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jslides.js"></script>
+	<script type="text/javascript">
+		var jslides;
+		jQuery(document).ready(function() {
+			jslides = jSlides('#slideshow');
+		});
+	</script>
+	<link rel="stylesheet" href="jslides.css" />
+</head>
+<body>
+
+<h1>jSlides</h1>
+
+<div id="slideshow">
+	<ul>
+		<li>
+			<div class="title">Woo!</div>
+			<img src="http://lorempixel.com/400/300/?1" />
+			<div class="caption">Some awesome picture</div>
+		</li>
+		<li>
+			<div class="title">Cool times.</div>
+			<img src="http://lorempixel.com/400/300/?2" />
+			<div class="caption">Dang bro, dats a pretty cool picture you've got right there</div>
+		</li>
+		<li>
+			<img src="http://lorempixel.com/400/300/?3" />
+		</li>
+	</ul>
+</div>
+
+</body>
+</html>

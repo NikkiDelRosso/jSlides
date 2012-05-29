@@ -3,14 +3,18 @@ ul.jslides {
 	padding: 0px;
 	list-style: none;
 	position: relative;
+	overflow: hidden;
 }
 
 ul.jslides li {
 	position: absolute;
+	background-color: black;
+	height: 100%;
+	width: 100%;
 }
 
 ul.jslides li img {
-	background-color: black;
+	display: block;
 }
 
 ul.jslides li .title, ul.jslides li .caption {
@@ -31,9 +35,10 @@ ul.jslides li .caption {
 	background-color: rgba(0,0,0,0.5);
 	color: white;
 	width: 100%;
-	padding: 10px;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+}
+
+ul.jslides li .caption p {
+	margin: 10px;
 }
 
 ul.jslides li.active {
@@ -43,3 +48,44 @@ ul.jslides li.active {
 ul.jslides li.next {
 	z-index: 98;
 }
+
+.jthumbs {
+	position: relative;
+}
+
+.jthumbs-scroller {
+	overflow: hidden;
+}
+
+.jthumbs ul {
+	margin: 0px;
+	padding: 10px 25px;
+}
+
+.jthumbs img {
+	max-width: 100px;
+	max-height: 50px; 
+	display: block;
+	opacity: 0.5;
+}
+
+.jthumbs li {
+	float: left;
+	list-style: none;
+	padding: 0 5px;
+}
+
+.jthumbs li.active img {
+	opacity: 1;
+}
+
+.jthumbs-left, .jthumbs-right {
+	height: 100%;
+	width: 20px;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+}
+
+.jthumbs-left { left: 0; }
+.jthumbs-right { right: 0; }

@@ -146,6 +146,8 @@ var jSlides = function (selector, width, height, args) {
 				}
 			);
 
+			that.centerThumbs(0,'li:first-child');
+
 		}
 		
 		that.slides.width(width);

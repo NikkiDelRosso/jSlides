@@ -60,6 +60,7 @@ ul.jslides li.next {
 .jthumbs ul {
 	margin: 0px;
 	padding: 10px 25px;
+	overflow: hidden;
 }
 
 .jthumbs img {

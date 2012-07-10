@@ -90,3 +90,21 @@ ul.jslides li.next {
 
 .jthumbs-left { left: 0; }
 .jthumbs-right { right: 0; }
+
+.jslides-nav div{
+	width: 25px;
+	height: 25px;
+	background-color: red;
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	margin-top: -12.5px;
+}
+
+.jslides-prev {
+	left: 0;
+}
+
+.jslides-next {
+	right: 0;
+}

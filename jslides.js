@@ -6,7 +6,7 @@ var jSlides = function (selector, width, height, args) {
 		var caption = next.find('.caption');
 		caption.hide();
 
-		if (!that.thumbs.is(":hover")) that.centerThumbs();
+		if (args.thumbs && !that.thumbs.is(":hover")) that.centerThumbs();
 
 		that.slides.find('.active').fadeOut('slow',function() {
 			// Since the caption is positioned at the bottom, this actually slides "up" to display it
@@ -84,6 +84,8 @@ var jSlides = function (selector, width, height, args) {
 
 	that.init = function () {
 		that.element = jQuery(selector);
+		if (that.element.css('position') == "static") that.element.css('position', 'relative');
+		that.element.css('width', width);
 
 		that.slides = that.element.find('ul');
 		if (!that.slides[0]) that.slides = $(document.createElement('ul')).appendTo(that.element);
@@ -148,6 +150,18 @@ var jSlides = function (selector, width, height, args) {
 
 			that.centerThumbs(0,'li:first-child');
 
+		}
+
+		if (args.nav) {
+			// Add navigation button
+			var nav = $(document.createElement('div')).addClass('jslides-nav')
+				.append($(document.createElement('div')).addClass('jslides-prev').attr('title','Previous Slide'))
+				.append($(document.createElement('div')).addClass('jslides-next').attr('title','Next Slide'));
+			
+			that.element.append(nav);
+			
+			$('.jslides-prev').click(that.prev);
+			$('.jslides-next').click(that.next);
 		}
 		
 		that.slides.width(width);

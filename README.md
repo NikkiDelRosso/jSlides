@@ -1,4 +1,4 @@
-jslides
+jSlides
 =======
 
 Just another jQuery slideshow.

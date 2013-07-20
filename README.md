@@ -1,7 +1,9 @@
 jslides
 =======
 
-Just another jQuery run slideshow.  
+Just another jQuery slideshow.
+
+---
 
 My motivations for creating this project were that I was unable to find a slideshow which supported a no-JS fallback without having every slide image embedded and downloaded immediately.
 

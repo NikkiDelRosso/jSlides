@@ -4,17 +4,9 @@
 	<title>jSlides</title>
 	<meta charset="utf-8" />
 	<style> body { font-family: arial; font-size: 13px;  } </style>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.81/jsrender.min.js"></script>
 	<script type="text/javascript" src="lib/jquery-tmpl/jquery.tmpl.js"></script>
-	<script type="text/x-jquery-tmpl" id="slideTemplate">
-		<li>
-			<div class="title">${title}</div>
-			<img src="${image}" alt="${title}" />
-			<div class="caption">
-				<p>${caption}</p>
-			</div>
-		</li>
-	</script>
 	<script type="text/javascript" src="jslides.js"></script>
 	<script type="text/javascript">
 		var jslides;
@@ -62,7 +54,7 @@
 				},
 			];
 
-			jslides = jSlides('#slideshow', 600, 300, {slides: slides, nav: true });
+			jslides = jSlides('#slideshow', 600, 300, {slides: slides, nav: true});
 		});
 	</script>
 	<link rel="stylesheet" href="jslides.css" />

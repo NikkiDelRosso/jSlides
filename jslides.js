@@ -1,5 +1,16 @@
 var jSlides = function (selector, width, height, args) {
 	var that = {};
+
+	if (typeof args.template === 'undefined') {
+		args.template = 
+			'<li>\
+				<div class="title">{{:title}}</div>\
+				<img src="{{:image}}" alt="{{:title}}" />\
+				<div class="caption">\
+					<p>{{:caption}}</p>\
+				</div>\
+			</li>';
+	}
 	
 	that.next = function () {
 		var next = that.element.find('.next');
@@ -45,9 +56,7 @@ var jSlides = function (selector, width, height, args) {
 	}
 
 	that.skipTo = function (i) {
-		console.log(i);
 		var selector = 'li:nth-child('+i+')';
-		console.log(selector);
 		var slide = that.element.find(selector);
 		
 		// Don't do anything if this slide doesn't exist
@@ -67,13 +76,11 @@ var jSlides = function (selector, width, height, args) {
 	that.start = function () { 
 		if (that.interval) that.stop(); 
 		that.interval = setInterval(that.next, 7000); 
-		console.log('start')
 	}
 
 	that.stop = function () {
 		clearInterval(that.interval); 
 		that.interval = null;
-		console.log('stop'); 
 	}
 
 	// Delay the next transition
@@ -90,9 +97,9 @@ var jSlides = function (selector, width, height, args) {
 		that.slides = that.element.find('ul');
 		if (!that.slides[0]) that.slides = $(document.createElement('ul')).appendTo(that.element);
 
-
 		if (args.slides) {
-			$("#slideTemplate").tmpl(args.slides).appendTo(that.slides);
+			var html = $.templates(args.template).render(args.slides)
+			that.slides.append(html);
 		}
 
 		if (args.thumbs) {

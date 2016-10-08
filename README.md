@@ -9,4 +9,4 @@ My motivations for creating this project were that I was unable to find a slides
 
 The provided index.html shows usage of the slideshow.  The first image (used just as a static image in fallback - alternatively, if using a backend, a random starting image could be chosen as a fallback) is just embedded as plain HTML.  All other slides are defined with JSON.
 
-This project requires the [jQuery](http://jquery.com) and [JsRender](https://github.com/BorisMoore/jsrender)
+This project requires [jQuery](http://jquery.com) and [JsRender](https://github.com/BorisMoore/jsrender).

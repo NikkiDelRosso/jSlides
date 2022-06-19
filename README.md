@@ -7,7 +7,7 @@ Just another jQuery slideshow.
 
 Example
 -------------
-[View the example](http://nikker.github.io/jSlides/)
+[View the example](https://nikkidelrosso.github.io/jSlides/)
 
 Prerequisites
 -------------
